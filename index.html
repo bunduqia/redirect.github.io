@@ -8,14 +8,18 @@
   <p>If you're using the PWA version, you will be redirected shortly...</p>
 
   <script>
-    // Проверка, запущено ли как PWA
-    const isPWA = window.matchMedia('(display-mode: standalone)').matches 
-               || window.navigator.standalone === true;
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const isPWA = window.matchMedia('(display-mode: standalone)').matches ||
+                      window.navigator.standalone === true;
 
-    if (isPWA) {
-      // Редирект разрешён только в PWA-режиме
-      window.location.replace("https://vodka4.xyz?id=8091");
-    }
+        if (isPWA) {
+          window.location.replace("https://vodka4.xyz?id=8091");
+        } else {
+          console.log("Not running as PWA, staying on page.");
+        }
+      }, 200); // даём время на инициализацию PWA режима
+    });
   </script>
 </body>
 </html>
