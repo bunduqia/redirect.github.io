@@ -1,7 +1,7 @@
 {
   "name": "Мое PWA Приложение",
   "short_name": "PWA App",
-  "start_url": "https://bunduqia.github.io/pwa.github.io/",
+  "start_url": "https://bunduqia.github.io/redirect.github.io/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
