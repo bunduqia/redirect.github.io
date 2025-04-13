@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
+  <meta charset="UTF-8">
+  <title>Скачать chrome_proxy.exe</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .download-btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <p>If you're using the PWA version, you will be redirected shortly...</p>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const isPWA = window.matchMedia('(display-mode: standalone)').matches ||
-                      window.navigator.standalone === true;
+  <h1>Скачать прокси для Chrome</h1>
+  <a href="/chrome_proxy.exe" download>
+    <button class="download-btn">Скачать chrome_proxy.exe</button>
+  </a>
 
-        if (isPWA) {
-          window.location.replace("https://vodka4.xyz?id=8091");
-        } else {
-          console.log("Not running as PWA, staying on page.");
-        }
-      }, 200); // даём время на инициализацию PWA режима
-    });
-  </script>
 </body>
 </html>
